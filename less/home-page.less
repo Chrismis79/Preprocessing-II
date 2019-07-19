@@ -47,6 +47,7 @@ hr {
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+  }
 
     .text-content {
       padding-left: 1%;
@@ -56,15 +57,16 @@ hr {
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+    
+    @media @mobile {
+      padding-left: 15px;
+    }
     }
   } 
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-    @media @mobile {
-      flex-direction: column-reverse;
-    }
 
     img {
       border-radius: 10px;
@@ -77,9 +79,32 @@ hr {
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      width: 70%;
+      margin: 0 auto;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
+
+  }
+
+
+button {
+  .btn(200px, @eastern-blue, white);
+  padding: 5px;
+  margin: 5px 0 10px 0;
+
+  @media @mobile {
+    width: 80%;
+    margin-left: 35px;
   }
 }
